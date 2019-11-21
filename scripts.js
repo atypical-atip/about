@@ -55,14 +55,14 @@ window.addEventListener('load', () => {
         
         //right mountain
         mountainRight = document.getElementById('mountain-right');
-        slideRight = Number(windowWidth / 2000 * scrollParallaxPercent);
+        slideRight = Number(windowWidth / 1500 * scrollParallaxPercent);
         mountainRightZoom = Number(1 + (windowWidth * 0.000005 * scrollParallaxPercent));
         mountainRight.style.transform = `translate3d(${slideRight}px, 0, 0) scale(${mountainRightZoom})`;
         scrollContentPercent     
 
         //left mountain
         mountainLeft = document.getElementById('mountain-left');
-        slideLeft = Number(windowWidth / 1500 * scrollParallaxPercent); 
+        slideLeft = Number(windowWidth / 1000 * scrollParallaxPercent); 
         mountainLeftZoom = Number(1 + (windowWidth * 0.00001 * scrollParallaxPercent));
         mountainLeft.style.transform = 'translate3d(-' + slideLeft + 'px, 0,0) scale(' + mountainLeftZoom + ')'; 
                 
