@@ -3,12 +3,12 @@
     "short_name": "Oleksii Dovbakh",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=GvbLyvk5jz",
+            "src": "./android-chrome-192x192.png?v=GvbLyvk5jz",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-256x256.png?v=GvbLyvk5jz",
+            "src": "./android-chrome-256x256.png?v=GvbLyvk5jz",
             "sizes": "256x256",
             "type": "image/png"
         }
