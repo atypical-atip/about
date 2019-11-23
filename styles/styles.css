@@ -4,8 +4,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Roboto'), local('Roboto-Regular'),
-         url('./fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('./fonts/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-700 - latin */
   @font-face {
@@ -13,8 +13,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Roboto Bold'), local('Roboto-Bold'),
-         url('./fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('./fonts/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/roboto-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
 *,*:before,*:after {
@@ -62,21 +62,21 @@ html, body {
 }
 
 .parallax__mountain__main {
-    background: url('./img/mountain-main.png') top center / cover no-repeat;
+    background: url('../img/mountain-main.png') top center / cover no-repeat;
 }
 
 .parallax__mountain__left {
-    background: url('./img/mountain-left.png') bottom left / 100% no-repeat;
+    background: url('../img/mountain-left.png') bottom left / 100% no-repeat;
     z-index: 1;
 }
 
 .parallax__mountain__right {
-    background: url('./img/mountain-right.png') bottom right / 45% no-repeat;
+    background: url('../img/mountain-right.png') bottom right / 45% no-repeat;
     z-index: 1;
 }
 
 .parallax__fog {
-    background: url('./img/fog_1.png') bottom / 100% no-repeat;
+    background: url('../img/fog_1.png') bottom / 100% no-repeat;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -139,15 +139,25 @@ html, body {
 
 /* Skills */
 .skills__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .skills__column {
     width: 33.333%;       
+    display: -webkit-box;       
+    display: -ms-flexbox;       
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .title {
@@ -157,8 +167,12 @@ html, body {
 }
 
 .skills__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 75%;
 }
 
@@ -171,8 +185,13 @@ html, body {
 /* Portfolio */
 
 .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
 }
 
 .portfolio_description {
@@ -199,7 +218,11 @@ html, body {
 }
 
 .portfolio a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 10px;
     margin: 20px;
@@ -210,6 +233,8 @@ html, body {
     color: #fff;
     text-align: center;    
     cursor: pointer;
+    -webkit-transition: background-color ease 0.5s, border-color ease 0.5s;
+    -o-transition: background-color ease 0.5s, border-color ease 0.5s;
     transition: background-color ease 0.5s, border-color ease 0.5s;
 }
 
@@ -228,9 +253,15 @@ html, body {
 .footer {    
     width: 100%;
     height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: hsl(120, 1%, 58%);
     color: #fff;    
     font-size: 1rem;
@@ -243,10 +274,19 @@ html, body {
 
 @media screen and (max-width: 400px) {
     #rotate {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         background-color: rgba(0,0,0,0.7);        
         height: 100%;
         position: absolute;
@@ -270,9 +310,16 @@ html, body {
 
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
     .portfolio__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }    
 
     .portfolio__preview {
@@ -282,8 +329,12 @@ html, body {
     }
 
     .button__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }   
 }
 
@@ -305,7 +356,9 @@ html, body {
     .skills__column {
         width: 50%;
         margin-bottom: 20px;
-        align-items: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
     }
 
     .skills__item img {
@@ -313,9 +366,16 @@ html, body {
     }
 
     .portfolio__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }    
 
     .portfolio__preview {
@@ -325,7 +385,11 @@ html, body {
     }
 
     .button__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
