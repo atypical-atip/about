@@ -236,6 +236,7 @@ html, body {
     -webkit-transition: background-color ease 0.5s, border-color ease 0.5s;
     -o-transition: background-color ease 0.5s, border-color ease 0.5s;
     transition: background-color ease 0.5s, border-color ease 0.5s;
+    z-index: 999;
 }
 
 .portfolio a:hover {
